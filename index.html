@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="assets/fontawesome/css/all.css" rel="stylesheet">
+	<style>
+		body {
+			background-color: #f2f2f2;
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: arial;
+		}
+
+		@font-face {
+			font-family: "dwiyan";
+			src: url('font/BRADHITC.TTF');
+		}
+
+		#logo-header {
+			width: 20%;
+			height: 50px;
+			background-color: white;
+			position: relative;
+			float: left;
+			border: 1px solid #F3F3F2;
+		}
+
+		#logo-header img {
+			width: 40px;
+			height: 40px;
+			margin: 2% 4%;
+			display: inline-block;
+		}
+
+		#logo-header h3 {
+			font-family: dwiyan;
+			display: inline-block;
+			position: absolute;
+			margin-top: 12px;
+			font-size: 1.4em;
+			padding-right: 3px;
+		}
+
+		#header-menu {
+			position: relative;
+			width: 80%;
+			background-color: white;
+			height: 50px;
+			float: right;
+			border: 1px solid #F3F3F2;
+		}
+
+		.burger {
+			padding: 14px;
+		}
+
+		.search {
+			margin-left: 10px;
+			opacity: .3;
+		}
+
+		#search {
+			padding: 3px;
+			margin-left: 3px;
+			display: inline-block;
+		}
+
+		#header-menu img {
+			width: 28px;
+			height: 28px;
+			border-radius: 50%;
+			display: inline-block;
+		}
+
+		.lonceng, .pesan, .img, #nama {
+			position: absolute;
+			right: 0;
+		}
+
+		.lonceng {
+			margin-right: 25%;
+			margin-top: 15px;
+			opacity: .3;
+		}
+
+		.pesan {
+			margin-right: 22%;
+			margin-top: 15px;
+			opacity: .3;
+		}
+
+		.img {
+			margin-right: 17%;
+			margin-top: 10px;
+		}
+
+		#nama {
+			display: inline-block;
+			margin-top: 15px;
+			margin-right: 2%;
+		}
+
+		#menu-admin {
+			width: 20%;
+			height: 600px;
+			background-color: white;
+			position: relative;
+			float: left;
+			border: 1px solid #F3F3F2;			
+		}
+
+		#main {
+			display: flex;
+			width: 80%;
+			flex-direction: row;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+
+		.forum1 {
+			width: 200px;
+			height: 200px;
+			background-color: white;
+			margin: 50px 20px;
+		}
+
+		.forum1:hover {
+			box-shadow: 0 4px 3px lightgrey;
+		}
+
+		li {
+			width: 75%;
+			height: 20px;
+			text-align: center;
+			margin: 30px auto;
+			list-style-type: none;
+		}
+
+		li:hover {
+			list-style-type: circle;
+		}
+
+		ul li a {
+			border: 1px solid white;
+			padding: 10px;
+			display: block;
+			text-decoration: none;
+			font-size: 1.2em;
+			background-color: #FAFAFA;
+			color: grey;
+		}
+
+		ul li a:hover {
+			text-decoration: underline;
+		}
+
+		p {
+			opacity: .7;
+		}
+
+		p:hover {
+			opacity: 1;
+			cursor: pointer;
+		}
+
+		.forum1 p {
+			text-align: center;
+			margin-top: 10px;
+		}
+
+		.b {
+			animation-name: muncul;
+			animation-duration: 5s;
+		}
+
+		.a {
+			animation-name: muncul;
+			animation-duration: 7s;	
+		}
+
+		.c {
+			animation-name: muncul;
+			animation-duration: 9s;
+		}
+
+		.d {
+			animation-name: muncul;
+			animation-duration: 11s;
+		}
+
+		.e {
+			animation-name: muncul;
+			animation-duration: 13s;
+		}
+
+		.f {
+			animation-name: muncul;
+			animation-duration: 15s;
+		}
+
+		.g {
+			animation-name: muncul;
+			animation-duration: 17s;
+		}
+
+		.h {
+			animation-name: muncul;
+			animation-duration: 17s;	
+		}
+
+		@keyframes muncul {
+				0% {
+					opacity: 0;
+				}
+
+				100% {
+					opacity: 1;
+				}
+		}
+
+		@media screen and (max-width: 1000px) {
+			#logo-header {
+				width: 100%;
+				height: 80px;
+				background-color: white;
+				position: relative;
+				float: left;
+				border: 1px solid #F3F3F2;
+			}
+
+			#logo-header img {
+				margin-left: 44%;
+				border: none;
+				width: 70px;
+				height: 70px;
+				margin-top: -10px;
+			}
+
+			#logo-header h3 {
+				display: block;
+				padding-left: 10%;
+				margin: 45px 20%;
+			}
+
+			#header-menu {
+				position: relative;
+				width: 100%;
+				background-color: white;
+				height: 50px;
+				float: right;
+				border: 1px solid #F3F3F2;
+			}
+
+			#header-menu p {
+				display: none;
+			}
+
+			.pesan {
+				display: none;
+			}	
+
+			#menu-admin {
+				display: none;
+			}
+
+			#main {
+				margin-left: 15%;
+			}
+
+			#main .forum1 {
+				width: 80%;
+				margin-top: 15px;
+			}
+
+			#main img {
+				width: 100%;
+			}
+
+			.b {
+				order: -1;
+				animation-name: muncul;
+				animation-duration: 5s;
+			}
+
+			.a {
+				animation-name: muncul;
+				animation-duration: 7s;	
+			}
+
+			.c {
+				animation-name: muncul;
+				animation-duration: 9s;
+			}
+
+			.d {
+				animation-name: muncul;
+				animation-duration: 11s;
+			}
+
+			.e {
+				animation-name: muncul;
+				animation-duration: 13s;
+			}
+
+			.f {
+				animation-name: muncul;
+				animation-duration: 15s;
+			}
+
+			.g {
+				animation-name: muncul;
+				animation-duration: 17s;
+			}
+
+			.h {
+				animation-name: muncul;
+				animation-duration: 17s;
+			}
+
+			@keyframes muncul {
+					0% {
+						opacity: 0;
+					}
+
+					100% {
+						opacity: 1;
+					}
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<div id="container">
+		<div id="logo-header">
+			<img src="img/156.jpg" alt="logo-header" id="logo-header">
+			<h3>ALUMNI SMPN 156</h3>
+		</div>	
+		<div id="header-menu">
+			<i class="fas fa-align-justify burger"></i>
+			<i class="fa fa-search search"></i>
+			<input type="search" id="search" placeholder="Search">
+			<i class="far fa-bell lonceng"></i>
+			<i class="far fa-envelope pesan"></i>
+			<img src="img/one.jpg" alt="foto" class="img">
+			<p id="nama">Dwiyan Purbo Prastio</p>
+		</div>
+		<div id="menu-admin">
+			<div id="menu-pilihan">
+				<ul>
+					<li><a href="#">Data Almuni (2019)</a></li>
+					<li><a href="#">Acara</a></li>
+					<li><a href="#">Chat</a></li>
+					<li><a href="#">Kontak Alumni</a></li>
+					<li><a href="#">Perkumpulan</a></li>
+					<li><a href="#">Formal</a></li>
+					<li><a href="#">Non Formal</a></li>
+					<li><a href="#">Pengaturan</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="main">
+			<div class="forum1 a">
+				<img src="img/alumni.jpeg" width="200" height="160" alt="alumni">
+				<p>Data Alumni</p>
+			</div>
+			<div class="forum1 b">
+				<img src="img/acara.jpeg" width="200" height="160" alt="acara">
+				<p>Acara</p>
+			</div>
+			<div class="forum1 c">
+				<img src="img/chat.jpeg" width="200" height="160" alt="chat">
+				<p>Percakapan</p>
+			</div>
+			<div class="forum1 d">
+				<img src="img/kontak.jpeg" width="200" height="160" alt="kontak">
+				<p>Kontak Alumni</p>
+			</div>
+			<div class="forum1 e">
+				<img src="img/perkumpulan.jpeg" width="200" height="160" alt="perkumpulan">
+				<p>Perkumpulan</p>
+			</div>
+			<div class="forum1 f">
+				<img src="img/formal.jpeg" width="200" height="160" alt="formal">
+				<p>Formal</p>
+			</div>
+			<div class="forum1 g">
+				<img src="img/nonformal.jpeg" width="200" height="160" alt="nonformal">
+				<p>Non Formal</p>
+			</div>
+			<div class="forum1 h">
+				<img src="img/pengaturan.jpeg" width="200" height="160" alt="pengaturan">
+				<p>Pengaturan</p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		var search = document.getElementById('search');
+
+		function klik() {
+			search.style.backgroundColor = "#f2f2f2";
+			search.style.color = "brown";
+			search.style.border = "1px solid lightgrey";
+		}
+
+		function lepasKlik() {
+			search.style.backgroundColor = "white";
+		}
+
+		search.addEventListener('click', function() {
+			klik();
+		});
+
+		search.addEventListener('mouseleave', function() {
+			lepasKlik();
+		});
+	</script>
+	
+</body>
+</html>
